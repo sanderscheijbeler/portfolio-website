@@ -1,0 +1,229 @@
+
+body
+  background-color: $lichtgrijs
+  font-family: 'Roboto', sans-serif
+  font-weight: 100
+  line-height: 1.5em
+  font-size: 20px
+  letter-spacing: 0.05em
+
+  a
+    color: $gray-dark
+    font-weight: 300
+    transition: 0.2s ease-out
+    &:hover
+      color: $opvallend
+      text-decoration: none
+
+  span.dik
+    font-weight: 300
+
+  h1
+    text-transform: uppercase
+    line-height: 1.5em
+    letter-spacing: 0.05em
+    font-weight: 100
+
+  .knop
+    display: inline-block
+    border: 1px solid white
+    padding: 5px 50px
+    margin: 20px 10px
+    transition: 0.5s ease-out
+    font-weight: 300
+    &:hover
+      background-color: white
+      color: $grijs
+
+  .kleur
+    background-color: $opvallend
+    transition: 0.5s ease-out
+    &:hover
+      background-color: white
+      color: $grijs
+
+  hr
+    padding: 0
+    border: none
+    border-top: medium double $grijs
+    color: $grijs
+    text-align: center
+
+  hr:after
+    content: "§"
+    display: inline-block
+    position: relative
+    top: -0.7em
+    font-size: 1.5em
+    padding: 0 0.25em
+    background: $lichtgrijs
+
+
+#main
+  background:
+    image: url(../img/schiedam.jpg)
+    position: center center
+    size: cover
+  height: 500px
+  color: white
+  text-align: center
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  margin-bottom: $einde
+
+  .inner
+    background-color: rgba(0, 0, 0, 0.6)
+    padding: 30px
+    max-width: 320px
+
+
+  .inner-text
+    max-width: 200px
+    display: flex
+    flex-direction: column
+    justify-content: space-between
+    text-transform: uppercase
+
+    header
+      margin: 0
+      font-weight: bold
+      letter-spacing: 0.2em
+
+    p
+      padding: 20px 0 5px 0
+      display: block
+
+    footer
+      padding: 10px 0
+
+
+  .dubbellijn
+    border-top: 4px double white
+    border-bottom: 4px double white
+    padding: 10px
+    margin: 0
+
+#visie
+  color: $grijs
+  margin-bottom: $einde
+
+  h1
+    margin-top: 40px
+    font-size: 1.5em
+
+
+#informatie
+  color: white
+  margin-bottom: $einde
+
+  .box
+    background-color: $opvallend
+    padding: 70px
+
+    h1
+      margin-top: 0px
+
+  .icons
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+
+
+    i
+      font-size: 8em
+      padding: 0
+      color: rgba(255, 255, 255, 0.6)
+
+#blokken
+  margin-bottom: $einde
+  .blok
+    margin-bottom: 20px
+
+    header
+      margin: 30px 0
+
+    i
+      font-size: 8em
+      padding: 0
+      color: $grijs
+
+#portfolio
+  margin-bottom: $einde
+
+  .inner-portfolio
+    background-color: white
+    padding: 40px
+
+    h1
+      margin-bottom: 40px
+
+    .item
+      margin-bottom: 50px
+
+      .afbeelding
+        background:
+          position: center center
+          size: cover
+        height: 200px
+        width: 100%
+
+      header
+        margin: 30px 0 10px 0
+        text-transform: uppercase
+      p
+        margin: 0px
+
+      .mijn-website
+        background:
+          image: url(../img/sanderscheijbelerpreview.jpg)
+
+      .veilig-leren-rijden
+        background:
+          image: url(../img/veiliglerenrijdenpreview.jpg)
+
+      .kerst-in-de-kerk
+        background:
+          image: url(../img/kerstindekerkpreview.jpg)
+
+footer
+  margin-bottom: $einde
+
+  a
+    color: $gray-dark
+
+  .fa
+    font-size: 2em
+    padding: 0 10px
+    margin-bottom: 30px
+    transition: 0.5s ease-out
+
+  .fa-linkedin
+    &:hover
+      color: #007bb5
+
+  .fa-github-alt
+    &:hover
+      color: $gray-base
+
+  .fa-facebook
+    &:hover
+      color: #3b5998
+
+  .fa-twitter
+    &:hover
+      color: #55acee
+
+  .fa-instagram
+    &:hover
+      color: #e95950
+
+  .fa-envelope-o
+    &:hover
+      color: #DC143C
+
+  .fa-phone
+    &:hover
+      color: #4dc247
