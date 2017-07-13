@@ -125,17 +125,14 @@ body
     h1
       margin-top: 0px
 
-  .icons
-    display: flex
-    flex-direction: row
-    flex-wrap: wrap
-    justify-content: space-between
-
-
     i
       font-size: 8em
       padding: 0
       color: rgba(255, 255, 255, 0.6)
+
+    img
+      height: 100%
+
 
 #blokken
   margin-bottom: $einde
@@ -157,11 +154,20 @@ body
     background-color: white
     padding: 40px
 
+  .items
+    display: flex
+    flex-wrap: wrap
+
+
     h1
       margin-bottom: 40px
 
     .item
       margin-bottom: 50px
+      display: flex
+      flex-direction: column
+      justify-content: space-between
+
 
       .afbeelding
         background:
@@ -193,6 +199,12 @@ footer
 
   a
     color: $gray-dark
+
+  .logos
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    flex: 1
 
   .fa
     font-size: 2em

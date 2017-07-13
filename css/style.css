@@ -7389,23 +7389,12 @@ body {
     padding: 70px; }
     #informatie .box h1 {
       margin-top: 0px; }
-  #informatie .icons {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
-    #informatie .icons i {
+    #informatie .box i {
       font-size: 8em;
       padding: 0;
       color: rgba(255, 255, 255, 0.6); }
+    #informatie .box img {
+      height: 100%; }
 
 #blokken {
   margin-bottom: 60px; }
@@ -7423,31 +7412,59 @@ body {
   #portfolio .inner-portfolio {
     background-color: white;
     padding: 40px; }
-    #portfolio .inner-portfolio h1 {
+  #portfolio .items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    #portfolio .items h1 {
       margin-bottom: 40px; }
-    #portfolio .inner-portfolio .item {
-      margin-bottom: 50px; }
-      #portfolio .inner-portfolio .item .afbeelding {
+    #portfolio .items .item {
+      margin-bottom: 50px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+              flex-direction: column;
+      -webkit-box-pack: justify;
+          -ms-flex-pack: justify;
+              justify-content: space-between; }
+      #portfolio .items .item .afbeelding {
         background-position: center center;
         background-size: cover;
         height: 200px;
         width: 100%; }
-      #portfolio .inner-portfolio .item header {
+      #portfolio .items .item header {
         margin: 30px 0 10px 0;
         text-transform: uppercase; }
-      #portfolio .inner-portfolio .item p {
+      #portfolio .items .item p {
         margin: 0px; }
-      #portfolio .inner-portfolio .item .mijn-website {
+      #portfolio .items .item .mijn-website {
         background-image: url(../img/sanderscheijbelerpreview.jpg); }
-      #portfolio .inner-portfolio .item .veilig-leren-rijden {
+      #portfolio .items .item .veilig-leren-rijden {
         background-image: url(../img/veiliglerenrijdenpreview.jpg); }
-      #portfolio .inner-portfolio .item .kerst-in-de-kerk {
+      #portfolio .items .item .kerst-in-de-kerk {
         background-image: url(../img/kerstindekerkpreview.jpg); }
 
 footer {
   margin-bottom: 60px; }
   footer a {
     color: #333333; }
+  footer .logos {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1; }
   footer .fa {
     font-size: 2em;
     padding: 0 10px;
