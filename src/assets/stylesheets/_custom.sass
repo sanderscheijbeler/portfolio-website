@@ -95,8 +95,9 @@ body
       padding: 20px 0 5px 0
       display: block
 
-    footer
-      padding: 10px 0
+    a
+      padding: 10px
+
 
 
   .dubbellijn
@@ -239,3 +240,88 @@ footer
   .fa-phone
     &:hover
       color: #4dc247
+
+// CV pagina
+.wrapper
+  display: flex
+  flex-direction: row
+
+  .cv-style
+    padding: $cv-text-padding
+
+  .cv-header
+    color: $gray-lighter
+    background-color: $gray
+    display: flex
+    flex-direction: column
+
+    a
+      color: $gray-lighter
+
+    h3
+      margin: 10px 0
+      text-align: center
+
+    h4
+      margin: 0px
+
+    .progress
+      margin-bottom: 8px
+
+    .cv-afbeelding
+      margin: 0 auto
+
+      img
+        padding: 30px
+
+    .cv-knop
+      font-size: 1.5em
+      padding: $cv-padding
+      box-shadow: 0px 17px 26px -9px rgba(0,0,0,0.75)
+
+    .cv-contact
+      background-color: #FF7260
+    .cv-contact-info
+      i
+        font-size: 1.2em
+
+    .cv-talen
+      background-color: #218C8D
+
+    .cv-skills
+      background-color: #8EDC9D
+
+
+    .cv-hobbies
+      background-color: #EF7126
+
+    .cv-hobbies-info
+      display: flex
+      flex-direction: row
+      justify-content: space-around
+
+      i
+        font-size: 1.8em
+
+
+  .cv-body
+    padding: 10px
+
+    .werk-onderwerp
+      padding-left: 30px
+      color: #FF7260
+
+    .cv-titel
+      margin: 3em 0
+
+      h3, h1, p
+        margin: 0
+        line-height: 1em
+
+      h1
+        font-size: 3em
+        font-weight: 500
+
+    .cv-werkervaring
+      h3
+        font-weight: 500
