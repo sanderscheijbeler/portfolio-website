@@ -1,5 +1,38 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,900");
+@-webkit-keyframes tada {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1); }
+  10%, 20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+            transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg); }
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+            transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg); }
+  40%, 60%, 80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+            transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg); }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1); } }
+@keyframes tada {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1); }
+  10%, 20% {
+    -webkit-transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+            transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg); }
+  30%, 50%, 70%, 90% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+            transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg); }
+  40%, 60%, 80% {
+    -webkit-transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+            transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg); }
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1); } }
+
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
@@ -7493,6 +7526,8 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row; }
+  .wrapper .cv-menu-knop {
+    display: none; }
   .wrapper .cv-style {
     padding: 20px 40px; }
   .wrapper .cv-header {
@@ -7504,7 +7539,8 @@ footer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
-            flex-direction: column; }
+            flex-direction: column;
+    box-shadow: 11px 0px 40px -3px rgba(0, 0, 0, 0.75); }
     .wrapper .cv-header a {
       color: #eeeeee; }
     .wrapper .cv-header h3 {
@@ -7544,18 +7580,48 @@ footer {
           justify-content: space-around; }
       .wrapper .cv-header .cv-hobbies-info i {
         font-size: 1.8em; }
-  .wrapper .cv-body {
-    padding: 10px; }
-    .wrapper .cv-body .werk-onderwerp {
-      padding-left: 30px;
-      color: #FF7260; }
-    .wrapper .cv-body .cv-titel {
-      margin: 3em 0; }
-      .wrapper .cv-body .cv-titel h3, .wrapper .cv-body .cv-titel h1, .wrapper .cv-body .cv-titel p {
-        margin: 0;
-        line-height: 1em; }
-      .wrapper .cv-body .cv-titel h1 {
-        font-size: 3em;
-        font-weight: 500; }
-    .wrapper .cv-body .cv-werkervaring h3 {
-      font-weight: 500; }
+
+@media screen and (max-width: 1100px) {
+  .wrapper .cv-header {
+    display: none; }
+  .wrapper .cv-afbeelding {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .wrapper .activated {
+    display: block;
+    width: 100vw; }
+  .wrapper .cv-menu-knop {
+    z-index: 44;
+    height: 70px;
+    width: 70px;
+    position: fixed;
+    background-color: #555555;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    top: 10px;
+    left: 10px;
+    box-shadow: 0px 10px 26px -9px rgba(0, 0, 0, 0.75); }
+    .wrapper .cv-menu-knop i {
+      font-size: 1.6em;
+      color: white;
+      -webkit-animation: tada 2s infinite 5s;
+              animation: tada 2s infinite 5s; }
+  .wrapper .cv-body .cv-titel h1, .wrapper .cv-body .cv-titel h3, .wrapper .cv-body .cv-titel p {
+    margin: 0; }
+  .wrapper .cv-body .cv-titel h1 {
+    line-height: 1.1em;
+    font-size: 2em; }
+  .wrapper .cv-body .cv-titel h3 {
+    margin-top: 80px; } }

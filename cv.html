@@ -38,19 +38,19 @@
           <img src="../img/sanderprofielfoto.jpg" alt="Profielfoto Sander Scheijbeler" class="img-circle">
         </div>
         <!-- Contact -->
-        <div class="cv-contact cv-knop">Contact</div>
-        <div class="cv-contact-info cv-style">
+        <div rel="cv-contact" class="cv-contact cv-knop">Contact</div>
+        <div id="cv-contact" class="cv cv-contact-info cv-hide cv-style">
           <ul class="fa-ul">
             <li><i class="fa-li fa fa-home"></i>Schiedam, Nederland</li>
-            <li><i class="fa-li fa fa-envelope"></i><a href="mailto:sanderscheijbeler@gmail.com" target="_blank">sanderscheijbeler@gmail.com</a></li>
+            <li><i class="fa-li fa fa-envelope"></i><a href="mailto:sanderscheijbeler@gmail.com">sanderscheijbeler@gmail.com</a></li>
             <li><i class="fa-li fa fa-globe"></i><a href="http://www.sanderscheijbeler.nl" target="_blank">www.sanderscheijbeler.nl</a></li>
             <li><i class="fa-li fa fa-phone"></i><a href="tel:0031646492018">06 - 4649 2018</a></li>
           </ul>
         </div>
 
         <!-- Skills -->
-        <div class="cv-skills cv-knop">Skills</div>
-        <div class="cv-skills-info cv-style">
+        <div rel="cv-skills" class="cv-skills cv-knop">Skills</div>
+        <div id="cv-skills" class="cv cv-skills-info cv-hide cv-style">
           <h3>Talen en Libraries</h3>
           <h4>HTML 5</h4>
           <div class="progress">
@@ -106,8 +106,8 @@
         </div>
 
         <!-- Talen -->
-        <div class="cv-talen cv-knop">Talen</div>
-        <div class="cv-talen-info cv-style">
+        <div rel="cv-talen" class="cv-talen cv-knop">Talen</div>
+        <div id="cv-talen" class="cv cv-talen-info cv-hide cv-style">
           <h4>Nederlands</h4>
           <div class="progress">
             <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div>
@@ -127,8 +127,8 @@
         </div>
 
         <!-- Hobbies -->
-        <div class="cv-hobbies cv-knop">Hobbies</div>
-        <div class="cv-hobbies-info cv-style">
+        <div rel="cv-hobbies" class="cv-hobbies cv-knop">Hobbies</div>
+        <div id="cv-hobbies" class="cv cv-hobbies-info cv-hide cv-style">
           <i class="fa fa-code" aria-hidden="true"></i>
           <i class="fa fa-music" aria-hidden="true"></i>
           <i class="fa fa-bicycle" aria-hidden="true"></i>
@@ -142,6 +142,7 @@
       <div class="cv-body">
         <!-- Titel -->
         <div class="cv-titel cv-style">
+          <div class="cv-menu-knop"><i class="fa fa-bars" aria-hidden="true"></i></div>
           <h3>Mijn naam is</h3>
           <h1>Sander Scheijbeler</h1>
           <p>Front-end Developer en politieagent</p>
@@ -183,5 +184,13 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script>
+  $(document).ready(function(){
+    $('.cv-menu-knop').on('click', function(){
+      console.log("klik");
+      $('.cv-header').toggleClass('activated');
+    });
+  });
+  </script>
   </body>
 </html>

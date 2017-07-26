@@ -246,14 +246,22 @@ footer
   display: flex
   flex-direction: row
 
+  .cv-menu-knop
+    display: none
+
   .cv-style
     padding: $cv-text-padding
+
+  // .cv-mobiel-menu
+  //   display: none
 
   .cv-header
     color: $gray-lighter
     background-color: $gray
     display: flex
     flex-direction: column
+    box-shadow: 11px 0px 40px -3px rgba(0,0,0,0.75)
+
 
     a
       color: $gray-lighter
@@ -281,6 +289,7 @@ footer
 
     .cv-contact
       background-color: #FF7260
+
     .cv-contact-info
       i
         font-size: 1.2em
@@ -290,7 +299,6 @@ footer
 
     .cv-skills
       background-color: #8EDC9D
-
 
     .cv-hobbies
       background-color: #EF7126
@@ -303,16 +311,138 @@ footer
       i
         font-size: 1.8em
 
+@media screen and (max-width: 1100px)
+  .wrapper
+    .cv-header
+      display: none
+
+    .cv-afbeelding
+      display: flex
+      justify-content: center
+
+    .activated
+      display: block
+      width: 100vw
+      //overflow-x: hidden
+
+    .cv-menu-knop
+      z-index: 44
+      height: 70px
+      width: 70px
+      position: fixed
+      background-color: $gray
+      border-radius: 50%
+      display: flex
+      justify-content: center
+      align-items: center
+      top: 10px
+      left: 10px
+      box-shadow: 0px 10px 26px -9px rgba(0,0,0,0.75)
+
+      i
+        font-size: 1.6em
+        color: white
+        animation: tada 2s infinite 5s
+
+    .cv-body
+      .cv-titel
+        h1, h3, p
+          margin: 0
+
+        h1
+          line-height: 1.1em
+          font-size: 2em
+        h3
+          margin-top: 80px
+
+//   .wrapper
+//     flex-direction: column
+//     flex: 1 1 auto
+//     height: 100vh
+//     justify-content: space-between
+//
+//     .cv-hide, i
+//       display: none
+//
+//     .cv-active
+//       display: block
+//       background-color: $gray
+//       position: absolute
+//       margin-top: 40px
+//
+//     .cv-style
+//       padding: 0
+//
+//     .cv-contact-info
+//       padding: 30px
+//       width: 100%
+//
+//     .cv-header
+//       flex-direction: row
+//       height: 40px
+//
+//       .cv-knop
+//         box-shadow: none
+//         padding: 20px
+//         flex: 1 1 auto
+//         display: flex
+//         flex-direction: row
+//         justify-content: center
+//         align-items: center
+//         font-size: 16px
+//         background-color: $gray
+//         transition: 0.2s ease-out
+//
+//       .cv-contact
+//         &:active
+//           background-color: #FF7260
+//
+//       .cv-skills
+//         &:active
+//           background-color: #218C8D
+//
+//       .cv-talen
+//         &:active
+//           background-color: #EF7126
+//
+//       .cv-hobbies
+//         &:active
+//           background-color: #FF7260
+//
+//
+//       .cv-afbeelding
+//         display: none
+//
+//     .cv-body
+//       margin-top: 22px
+//       overflow-y: scroll
+//       padding: 1em 2em
+//       font-size: 0.8em
+//
+//       .cv-titel
+//         h1, h3, p
+//           margin: 0
+//
+//         h1
+//           line-height: 1.1em
+//
+//
+
+
+
+// EINDE CV-HEADER -- BEGIN CV-BODY
 
   .cv-body
     padding: 10px
 
-    .werk-onderwerp
+  .werk-onderwerp
       padding-left: 30px
       color: #FF7260
 
     .cv-titel
       margin: 3em 0
+
+
 
       h3, h1, p
         margin: 0
